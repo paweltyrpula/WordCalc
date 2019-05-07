@@ -1,114 +1,83 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="utf-8" />
-  <title>Licznik</title>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <title>Licznik</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
 
 <body>
-  <div class="container">
-    <h1 class="text-center"> Kalkulator dla tlumacza języków obcych</h1>
+    <div class="container">
+      <h1 class="text-center"> Kalkulator dla tlumacza języków obcych</h1>
 
-    <div class="row">
-      <div class="col-md-6 col-xs-12 ">
-        <h3> Wklej tutaj swój tekst</h3>
-        <textarea id="textinput" class="form-control" rows="6"></textarea>
-        <p>Ilość znaków <span id="count"></span></p>
-      </div>
-      <div class="col-md-6 col-xs-12">
-        <h3 class="text-center"> Preferencje językowe: </h3>
-        <div class="row">
-          <div class="col-md-8 col-xs-12">
-            <div  class="text-center">
-              <p>Wybierz język tłumaczenia</p>
-            </div>
+      <div class="row">
+        <div class="col-md-6 col-xs-12 ">
+          <h3> Wklej tutaj swój tekst</h3>
+          <textarea id="textinput" class="form-control" rows="6"></textarea>
+          <p>Ilość znaków <span id="count"></span></p>
+        </div>
+        <div class="col-md-6 col-xs-12">
+          <h3 class="text-center"> Preferencje językowe: </h3> <br/>
+          <div class="row">
+            <div class="col-md-12 col-xs-12">
+              <div  class="text-center">
+                <p>Wybierz język tłumaczenia</p>
+              </div>
 
-            <div class="row">
-              <div class="col-md-6 col-xs-12">
-                <div class="form-group">
-                            <label for="">Wybrany język:</label>
-                            <select id="languageFrom"  class="form-control">
-
-                          </select>
-                  </div>
-                </div>
-              <div class="col-md 6 col-xs-12" >
-                <div class="col-md-6 col-xs-12">
+              <div class="row">
+                <div class="col-md-4 col-xs-12">
                   <div class="form-group">
-                              <label for="">Język docelowy:</label>
-                              <select id="languageTo"  class="form-control">
-
-                            </select>
+                    <label for="">Wybrany język:</label>
+                      <select id="languageFrom"  class="form-control"></select>
                     </div>
                   </div>
-
+                <div class="col-md-4 col-xs-12" >
+                  <div class="form-group">
+                    <label for="">Język docelowy:</label>
+                    <select id="languageTo" class="form-control"></select>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-12">
+                  <div class="form-group">
+                    <label for="">Cena za znak: </label>
+                    <p id="priceLanguage"></p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-md-4 col-xs-12">
-            <div class="form-group">
-              <br/>  <br/>
-              <label for="">Cena za znak: </label>
-              <p id="priceLanguage"></p>
-            </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 col-xs-12">
+          <h3>Dodatkowe opcje: </h3>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" id="express"  value="">
+                  Tłumaczenie ekspresowe - 100% ceny
+              </label>
+          </div>
+
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" id="deliveryCustomer" value="">
+                Dowóz do klienta - 50 zł
+            </label>
           </div>
         </div>
-
-
-
-
-
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col-md-12 col-xs-12">
-        <h3>Dodatkowe opcje: </h3>
-
-        <div class="checkbox">
-          <label>
-      <input type="checkbox" id="express"  value="">
-      Tłumaczenie ekspresowe - 100% ceny
-    </label>
+      <div class="row">
+        <div class="col-md-12 col-xs-12">
+          <div class="well">
+            <h3 class="text-center">Cena łączna za tekst: <span id="summaryPrice"></span> zł</h3></div>
         </div>
-
-        <!-- <div class="checkbox">
-          <label>
-    <input type="checkbox" id="lowQuality" value="">
-
-      	Słaba jakość tekstu (np. tekst niewyraźny) - 50% w/w ceny
-  </label>
-        </div> -->
-
-        <div class="checkbox">
-          <label>
-    <input type="checkbox" id="deliveryCustomer" value="">
-      Dowóz do klienta - 50 zł
-  </label>
-        </div>
-
       </div>
+
     </div>
 
-
-    <div class="row">
-      <div class="col-md-12 col-xs-12">
-
-        <div class="well">
-          <h3 class="text-center">Cena łączna za tekst: <span id="summaryPrice"></span> zł</h3></div>
-
-      </div>
-    </div>
-
-
-
-
-  </div>
-
-  <script src="js/scripts.js"></script>
-</body>
-
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
