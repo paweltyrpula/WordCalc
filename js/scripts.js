@@ -74,9 +74,6 @@ select2.addEventListener('change', function () {
 
 })
 
-
-
-
 function printCount () {
     _count.innerHTML = count;
 };
@@ -85,26 +82,24 @@ function printPrice () {
     summaryPrice.innerHTML = price;
 };
 
-
-
 function update () {
     count = inputTextArea.value.length;
     printCount();
 }
+
 function calc () {
     update();
     basicPrice();
     mod_express();
     deliveryCustomerFunction();
     printPrice();
-
 }
+
 function basicPrice () {
     price = count * dane[select.value][select2.value];
     if(dane[select.value]==dane[select2.value]){
       setSelect2();
       price = count * dane[select.value][select2.value];
-
     }
 }
 
@@ -113,12 +108,11 @@ function mod_express () {
         price *= 2;
 }
 
-
-
 function deliveryCustomerFunction () {
   if(deliveryCustomer.checked)
       price += 50;
 }
+
 function init() {
     update();
     printPrice();
